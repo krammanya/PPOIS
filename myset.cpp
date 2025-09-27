@@ -56,7 +56,7 @@ istream& operator>>(istream& is, MySet& s) {
     return is;
 }
 
-bool MySet::check(const string& s) {
+bool MySet::check(const string& s) const {
     const char* p = s.c_str();
     int depth = 0;
     bool expect_element = true;
@@ -96,7 +96,7 @@ bool MySet::check(const string& s) {
     return depth == 0 && !expect_element && !last_was_comma;
 }
 
-string MySet::get_element(const char*& c, bool& valid_ref) {
+string MySet::get_element(const char*& c, bool& valid) {
     string t;
     while (*c && (*c == ' ' || *c == ',' || *c == '}')) ++c;
     if (*c == '\0') return "";
@@ -104,7 +104,7 @@ string MySet::get_element(const char*& c, bool& valid_ref) {
         int count = 0;
         do {
             if (*c == '\0') {
-                valid_ref = false;
+                valid = false;
                 return "";
             }
             t += *c;
@@ -134,9 +134,17 @@ vector<string> MySet::parse(const string& s) {
     if (*c == '\0') return result;
     ++c;
 
+ 
     string t;
     while ((t = get_element(c, valid)).size()) {
-        result.push_back(t);
+        bool exist = false;
+        for (size_t i = 0; i < result.size(); ++i) {
+            if (result[i] == t) {
+                exist = true;
+                break;
+            }
+        }
+        if (!exist)  result.push_back(t);
     }
 
     while (*c == ' ' || *c == '}') ++c;
@@ -144,10 +152,152 @@ vector<string> MySet::parse(const string& s) {
         valid = false;
         return {};
     }
+    if (result.empty()) {
+        valid = false;
+        return {};
+    }
 
     return result;
 }
 
+static string trim(const string& str) {
+    size_t first = 0;
+    while (first < str.size() && isspace(str[first])) {
+        first++;
+    }
+    size_t last = str.size();
+    while (last > first && isspace(str[last - 1])) last--;
+    if (first >= last) return string();
+    return str.substr(first, last - first);
+}
+
+void MySet::add_element(const string& str) {
+    if (!valid) return;
+    string new_elem=trim(str);
+    for (auto& element: elements) {
+        if (element == new_elem) {
+            return;
+        }
+    }
+    if (new_elem.front() == '{' && new_elem.back() == '}') {
+        if (!check(new_elem)) {
+            return; 
+        }
+    }
+    else {
+        for (char c : new_elem) {
+            if (c == '{' || c == '}' || c == ',') {
+                return; 
+            }
+        }
+    }
+    elements.push_back(new_elem);
+}
+
+bool MySet::remove_element(const string& str) {
+    if (!valid) return false;
+    string target = trim(str);
+    if (target.empty()) {
+        return false;
+    }
+    if (target.front() == '{' && target.back() == '}') {
+        if (!check(target)) return false ;
+    }
+    else {
+        for (char c : target) {
+            if (c == '{' || c == '}' || c == ',') return false;
+        }
+    }
+    for (size_t i = 0; i < elements.size(); ++i) {
+        if (elements[i] == target) {
+            elements.erase(elements.begin() + i);
+            return true;
+        }
+    }
+    return false;
+}
+
+int  MySet::size() const {
+    if (!valid) return 0;
+    return elements.size();
+}
+
+bool MySet::operator[](const std::string& str) const {
+    if (!valid) return false;
+    string target = trim(str);
+    if (target.empty()) return false;
+    if (target.front() == '{' && target.back() == '}') {
+        if (!check(target))
+            return  false;
+    }
+    else {
+        for (char c : target) {
+            if (c == '{' || c == '}' || c == ',') return false;
+        }
+    }
+    for (size_t i = 0; i < elements.size(); ++i) {
+        if (elements[i] == target) {
+            return true;
+        }
+    }
+    return false;
+}
+
+MySet& MySet::operator+=(const MySet& other) {
+    if (!valid || !other.valid) {
+        valid = false;
+        return *this;
+    }
+    for (const auto& el : other.elements) {
+        if (!(*this)[el]) elements.push_back(el);
+    }
+    return *this;
+}
+
+MySet MySet::operator+(const MySet& other) const {
+    MySet result = *this;
+    result += other;
+    return result;
+}
+
+MySet& MySet::operator*=(const MySet& other) {
+    if (!valid || !other.valid) {
+        valid = false;
+        elements.clear();
+        return *this;
+    }
+    vector<string> result;
+    for (const auto& el : elements) {
+        if (other[el]) result.push_back(el);
+    }
+    elements = move(result);
+    return *this;
+}
+
+MySet MySet::operator*(const MySet& other) const {
+    MySet result = *this; 
+    result *= other;      
+    return result;       
+}
+
+MySet& MySet::operator-=(const MySet& other) {
+    if (!valid || !other.valid) {
+        valid = false;
+        elements.clear();
+        return *this;
+    }
+    vector<string> result;
+    for (const auto& el : elements) {
+        if (!other[el]) result.push_back(el);
+    }
+    elements = move(result);
+    return *this;
+}
+MySet MySet::operator-(const MySet& other) const {
+    MySet result = *this;
+    result -= other;
+    return result;
+}
 vector<string> MySet::parse(const char* cstr) {
     return parse(string(cstr));
 }
@@ -162,4 +312,71 @@ void MySet::print() const {
 
 bool MySet::is_valid() const {
     return valid;
+}
+
+vector<MySet> MySet::powerset() const {
+    vector<MySet> result;
+
+    if (!valid) {
+        return result;
+    }
+
+    if (elements.empty()) {
+        result.push_back(MySet());
+        return result;
+    }
+    int n = elements.size();
+    int subsets = 1 << n; 
+
+    for (int mask = 0; mask < subsets; mask++) {
+        MySet subset;
+        for (int i = 0; i < n; i++) {
+            if (mask & (1 << i)) {
+                subset.add_element(elements[i]);
+            }
+        }
+
+        result.push_back(subset);
+    }
+
+    return result;
+}
+
+MySet MySet::cantor_set(int iterations) const {
+    if (!valid || elements.empty()) return *this;
+    vector<string> set=elements;
+        for (int i = 0; i < iterations; i++) {
+            int n = set.size();
+            cout << "Итерация" << (i + 1) << ":" << n << " элементов\n";
+            if (n < 3) {
+                cout << "Завершение: элементов меньше 3" << endl;
+                break;
+            }
+
+           int remove_count = n / 3;
+           int side = (n - remove_count) / 2;
+            int middle_start = side;
+            int middle_end = n - side - 1;
+            if (middle_start > middle_end) break;
+            cout << "Удаляем элементы с " << middle_start+1 << " по " << middle_end+1 << endl;
+
+            vector<string> new_set;
+            for (int j = 0; j < n; j++) {
+                if (j<middle_start || j>middle_end) {
+                    new_set.push_back(set[j]);
+                }
+            }
+            set = new_set;
+            cout << "Множество после удаления: {";
+            for (int k = 0; k < set.size(); k++) {
+                if (k > 0) cout << ", ";
+                cout << set[k];
+            }
+            cout << "}" << endl << endl;
+        }
+        MySet result;
+        for (const string& element : set) {
+            result.add_element(element);
+        }
+        return result;
 }
