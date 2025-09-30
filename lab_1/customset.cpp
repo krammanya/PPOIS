@@ -1,25 +1,31 @@
-#include "myset.h"
+﻿#include "customset.h"
 
 using namespace std;
 
-MySet::MySet() : valid(true) {}
+CustomSet::CustomSet() : valid(true) {}
 
-MySet::MySet(const string& s) {
+CustomSet::CustomSet(const string& s) {
     valid = check(s);
-    if (valid) elements = parse(s);
-    else elements.clear();
+    if (!valid) {
+        elements.clear();
+        throw invalid_argument("Неправильно ввели множество"); 
+    }
+    elements = parse(s);
 }
 
-MySet::MySet(const char* cstr) {
+CustomSet::CustomSet(const char* cstr) {
     string s(cstr);
     valid = check(s);
-    if (valid) elements = parse(s);
-    else elements.clear();
+    if (!valid){
+        elements.clear();
+        throw invalid_argument("Неправильно ввели множество");
+    }
+    elements=parse(s);
 }
 
-MySet::MySet(const MySet& other) : elements(other.elements), valid(other.valid) {}
+CustomSet::CustomSet(const CustomSet& other) : elements(other.elements), valid(other.valid) {}
 
-MySet& MySet::operator=(const MySet& other) {
+CustomSet& CustomSet::operator=(const CustomSet& other) {
     if (this != &other) {
         elements = other.elements;
         valid = other.valid;
@@ -27,17 +33,17 @@ MySet& MySet::operator=(const MySet& other) {
     return *this;
 }
 
-MySet::~MySet() = default;
+CustomSet::~CustomSet() = default;
 
-bool MySet::operator==(const MySet& other) const {
+bool CustomSet::operator==(const CustomSet& other) const {
     return elements == other.elements;
 }
 
-bool MySet::operator!=(const MySet& other) const {
+bool CustomSet::operator!=(const CustomSet& other) const {
     return !(*this == other);
 }
 
-ostream& operator<<(ostream& os, const MySet& s) {
+ostream& operator<<(ostream& os, const CustomSet& s) {
     os << "{";
     for (size_t i = 0; i < s.elements.size(); ++i) {
         os << s.elements[i];
@@ -47,7 +53,7 @@ ostream& operator<<(ostream& os, const MySet& s) {
     return os;
 }
 
-istream& operator>>(istream& is, MySet& s) {
+istream& operator>>(istream& is, CustomSet& s) {
     string input;
     getline(is, input);
     s.valid = s.check(input);
@@ -56,7 +62,7 @@ istream& operator>>(istream& is, MySet& s) {
     return is;
 }
 
-bool MySet::check(const string& s) const {
+bool CustomSet::check(const string& s) const {
     const char* p = s.c_str();
     int depth = 0;
     bool expect_element = true;
@@ -96,7 +102,7 @@ bool MySet::check(const string& s) const {
     return depth == 0 && !expect_element && !last_was_comma;
 }
 
-string MySet::get_element(const char*& c, bool& valid) {
+string CustomSet::get_element(const char*& c, bool& valid) {
     string t;
     while (*c && (*c == ' ' || *c == ',' || *c == '}')) ++c;
     if (*c == '\0') return "";
@@ -123,7 +129,7 @@ string MySet::get_element(const char*& c, bool& valid) {
     return t;
 }
 
-vector<string> MySet::parse(const string& s) {
+vector<string> CustomSet::parse(const string& s) {
     if (!check(s)) {
         valid = false;
         return {};
@@ -134,7 +140,7 @@ vector<string> MySet::parse(const string& s) {
     if (*c == '\0') return result;
     ++c;
 
- 
+
     string t;
     while ((t = get_element(c, valid)).size()) {
         bool exist = false;
@@ -171,37 +177,35 @@ static string trim(const string& str) {
     return str.substr(first, last - first);
 }
 
-void MySet::add_element(const string& str) {
-    if (!valid) return;
-    string new_elem=trim(str);
-    for (auto& element: elements) {
+void CustomSet::add_element(const string& str) {
+    string new_elem = trim(str);
+    for (auto& element : elements) {
         if (element == new_elem) {
             return;
         }
     }
     if (new_elem.front() == '{' && new_elem.back() == '}') {
         if (!check(new_elem)) {
-            return; 
+            return;
         }
     }
     else {
         for (char c : new_elem) {
             if (c == '{' || c == '}' || c == ',') {
-                return; 
+                return;
             }
         }
     }
     elements.push_back(new_elem);
 }
 
-bool MySet::remove_element(const string& str) {
-    if (!valid) return false;
+bool CustomSet::remove_element(const string& str) {
     string target = trim(str);
     if (target.empty()) {
         return false;
     }
     if (target.front() == '{' && target.back() == '}') {
-        if (!check(target)) return false ;
+        if (!check(target)) return false;
     }
     else {
         for (char c : target) {
@@ -217,13 +221,11 @@ bool MySet::remove_element(const string& str) {
     return false;
 }
 
-int  MySet::size() const {
-    if (!valid) return 0;
+int  CustomSet::size() const {
     return elements.size();
 }
 
-bool MySet::operator[](const std::string& str) const {
-    if (!valid) return false;
+bool CustomSet::operator[](const std::string& str) const {
     string target = trim(str);
     if (target.empty()) return false;
     if (target.front() == '{' && target.back() == '}') {
@@ -243,29 +245,20 @@ bool MySet::operator[](const std::string& str) const {
     return false;
 }
 
-MySet& MySet::operator+=(const MySet& other) {
-    if (!valid || !other.valid) {
-        valid = false;
-        return *this;
-    }
+CustomSet& CustomSet::operator+=(const CustomSet& other) {
     for (const auto& el : other.elements) {
         if (!(*this)[el]) elements.push_back(el);
     }
     return *this;
 }
 
-MySet MySet::operator+(const MySet& other) const {
-    MySet result = *this;
+CustomSet CustomSet::operator+(const CustomSet& other) const {
+    CustomSet result = *this;
     result += other;
     return result;
 }
 
-MySet& MySet::operator*=(const MySet& other) {
-    if (!valid || !other.valid) {
-        valid = false;
-        elements.clear();
-        return *this;
-    }
+CustomSet& CustomSet::operator*=(const CustomSet& other) {
     vector<string> result;
     for (const auto& el : elements) {
         if (other[el]) result.push_back(el);
@@ -274,18 +267,13 @@ MySet& MySet::operator*=(const MySet& other) {
     return *this;
 }
 
-MySet MySet::operator*(const MySet& other) const {
-    MySet result = *this; 
-    result *= other;      
-    return result;       
+CustomSet CustomSet::operator*(const CustomSet& other) const {
+    CustomSet result = *this;
+    result *= other;
+    return result;
 }
 
-MySet& MySet::operator-=(const MySet& other) {
-    if (!valid || !other.valid) {
-        valid = false;
-        elements.clear();
-        return *this;
-    }
+CustomSet& CustomSet::operator-=(const CustomSet& other) {
     vector<string> result;
     for (const auto& el : elements) {
         if (!other[el]) result.push_back(el);
@@ -293,43 +281,38 @@ MySet& MySet::operator-=(const MySet& other) {
     elements = move(result);
     return *this;
 }
-MySet MySet::operator-(const MySet& other) const {
-    MySet result = *this;
+CustomSet CustomSet::operator-(const CustomSet& other) const {
+    CustomSet result = *this;
     result -= other;
     return result;
 }
-vector<string> MySet::parse(const char* cstr) {
+vector<string> CustomSet::parse(const char* cstr) {
     return parse(string(cstr));
 }
 
-vector<string> MySet::get_elements() const {
+vector<string> CustomSet::get_elements() const {
     return elements;
 }
 
-void MySet::print() const {
+void CustomSet::print() const {
     cout << *this << endl;
 }
 
-bool MySet::is_valid() const {
+bool CustomSet::is_valid() const {
     return valid;
 }
 
-vector<MySet> MySet::powerset() const {
-    vector<MySet> result;
-
-    if (!valid) {
-        return result;
-    }
-
+vector<CustomSet> CustomSet::powerset() const {
+    vector<CustomSet> result;
     if (elements.empty()) {
-        result.push_back(MySet());
+        result.push_back(CustomSet());
         return result;
     }
     int n = elements.size();
-    int subsets = 1 << n; 
+    int subsets = 1 << n;
 
     for (int mask = 0; mask < subsets; mask++) {
-        MySet subset;
+        CustomSet subset;
         for (int i = 0; i < n; i++) {
             if (mask & (1 << i)) {
                 subset.add_element(elements[i]);
@@ -342,41 +325,40 @@ vector<MySet> MySet::powerset() const {
     return result;
 }
 
-MySet MySet::cantor_set(int iterations) const {
-    if (!valid || elements.empty()) return *this;
-    vector<string> set=elements;
-        for (int i = 0; i < iterations; i++) {
-            int n = set.size();
-            cout << "Итерация" << (i + 1) << ":" << n << " элементов\n";
-            if (n < 3) {
-                cout << "Завершение: элементов меньше 3" << endl;
-                break;
-            }
-
-           int remove_count = n / 3;
-           int side = (n - remove_count) / 2;
-            int middle_start = side;
-            int middle_end = n - side - 1;
-            if (middle_start > middle_end) break;
-            cout << "Удаляем элементы с " << middle_start+1 << " по " << middle_end+1 << endl;
-
-            vector<string> new_set;
-            for (int j = 0; j < n; j++) {
-                if (j<middle_start || j>middle_end) {
-                    new_set.push_back(set[j]);
-                }
-            }
-            set = new_set;
-            cout << "Множество после удаления: {";
-            for (int k = 0; k < set.size(); k++) {
-                if (k > 0) cout << ", ";
-                cout << set[k];
-            }
-            cout << "}" << endl << endl;
+CustomSet CustomSet::cantor_set(int iterations) const {
+    //if (!valid || elements.empty()) return *this;
+    vector<string> set = elements;
+    for (int i = 0; i < iterations; i++) {
+        int n = set.size();
+        cout << "Итерация" << (i + 1) << ":" << n << " элементов\n";
+        if (n < 3) {
+            cout << "Завершение: элементов меньше 3" << endl;
+            break;
         }
-        MySet result;
-        for (const string& element : set) {
-            result.add_element(element);
+        int remove_count = n / 3;
+        int side = (n - remove_count) / 2;
+        int middle_start = side;
+        int middle_end = n - side - 1;
+        if (middle_start > middle_end) break;
+        cout << "Удаляем элементы с " << middle_start + 1 << " по " << middle_end + 1 << endl;
+
+        vector<string> new_set;
+        for (int j = 0; j < n; j++) {
+            if (j<middle_start || j>middle_end) {
+                new_set.push_back(set[j]);
+            }
         }
-        return result;
+        set = new_set;
+        cout << "Множество после удаления: {";
+        for (int k = 0; k < set.size(); k++) {
+            if (k > 0) cout << ", ";
+            cout << set[k];
+        }
+        cout << "}" << endl << endl;
+    }
+    CustomSet result;
+    for (const string& element : set) {
+        result.add_element(element);
+    }
+    return result;
 }

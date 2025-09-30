@@ -1,75 +1,80 @@
+
 #include <iostream>
-#include "myset.h"
+#include "customset.h"
 
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "ru");
 
-    MySet s1;
-    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾: ";
-    cin >> s1;
+    cout << "Ââåäèòå 1 ìíîæåñòâî: ";
+    string input1;
+    getline(cin, input1);
 
-    if (s1.is_valid()) {
-        cout << "Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸: ";
+    CustomSet s1;
+    try {
+        s1 = CustomSet(input1);
+        cout << "Âû ââåëè: ";
         s1.print();
     }
-    else {
-        cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð²Ð²Ð¾Ð´Ðµ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð° Ñ‡ÐµÑ€ÐµÐ· cin.\n";
+    catch (const invalid_argument& e) {
+        cout << "Îøèáêà: " << e.what() << endl;
+        return 1;
     }
-   
+    
+
     while (true) {
-        cout << "=== ÐœÐµÐ½ÑŽ ===\n"
-            << " 0. Ð’Ñ‹Ñ…Ð¾Ð´\n"
-            << " 1. Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°\n"
-            << " 2. Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°\n"
-            << " 3. ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°\n"
-            << " 4. ÐŸÑ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð½Ð¾ÑÑ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°\n"
-            << " 5. ÐžÐ±ÑŠÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ Ñ Ð´Ñ€ÑƒÐ³Ð¸Ð¼ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾Ð¼\n"
-            << " 6. ÐŸÐµÑ€ÐµÑÐµÑ‡ÐµÐ½Ð¸Ðµ Ñ Ð´Ñ€ÑƒÐ³Ð¸Ð¼ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾Ð¼\n"
-            << " 7. Ð Ð°Ð·Ð½Ð¾ÑÑ‚ÑŒ Ñ Ð´Ñ€ÑƒÐ³Ð¸Ð¼ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾Ð¼\n"
-            << " 8. ÐŸÐ¾ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÑŒ Ð±ÑƒÐ»ÐµÐ°Ð½\n"
-            << " 9.ÐšÐ°Ð½Ñ‚Ð¾Ñ€Ð¾Ð²Ð¾ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾\n"
-            << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸ÑŽ (0â€“9): ";
+        cout << "=== Ìåíþ ===\n"
+            << " 0. Âûõîä\n"
+            << " 1. Äîáàâëåíèå ýëåìåíòà\n"
+            << " 2. Óäàëåíèå ýëåìåíòà\n"
+            << " 3. Ìîùíîñòü ìíîæåñòâà\n"
+            << " 4. Ïðèíàäëåæíîñòü ýëåìåíòà\n"
+            << " 5. Îáúåäèíåíèå ñ äðóãèì ìíîæåñòâîì\n"
+            << " 6. Ïåðåñå÷åíèå ñ äðóãèì ìíîæåñòâîì\n"
+            << " 7. Ðàçíîñòü ñ äðóãèì ìíîæåñòâîì\n"
+            << " 8. Ïîñòðîèòü áóëåàí\n"
+            << " 9.Êàíòîðîâî ìíîæåñòâî\n"
+            << "Âûáåðèòå îïåðàöèþ (0–9): ";
         int choice;
         cin >> choice;
         if (choice == 0) {
-            cout << "Ð—Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.\n";
+            cout << "Çàâåðøåíèå ïðîãðàììû.\n";
             break;
         }
         switch (choice) {
         case 1: {
-            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: ";
+            cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ: ";
             string elem;
             cin >> ws;
             getline(cin, elem);
             s1.add_element(elem);
-            cout << "ÐœÐ½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾ÑÐ»Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: ";
+            cout << "Ìíîæåñòâî ïîñëå äîáàâëåíèÿ: ";
             s1.print();
             break;
         }
         case 2: {
-            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: ";
+            cout << "Ââåäèòå ýëåìåíò äëÿ óäàëåíèÿ: ";
             string target;
             cin >> ws;
             getline(cin, target);
             bool ok = s1.remove_element(target);
             if (ok) {
-                cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»Ñ‘Ð½\n";
+                cout << "Ýëåìåíò óäàë¸í\n";
                 s1.print();
             }
             else {
-                cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ðµ Ð½ÐµÑ‚\n";
+                cout << "Òàêîãî ýëåìåíòà â ìíîæåñòâå íåò\n";
             }
             break;
         }
         case 3: {
-            cout << "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°: " << s1.size() << "\n";
+            cout << "Ìîùíîñòü ìíîæåñòâà: " << s1.size() << "\n";
             break;
         }
 
         case 4: {
-            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ¸ Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð½Ð¾ÑÑ‚Ð¸: ";
+            cout << "Ââåäèòå ýëåìåíò äëÿ ïðîâåðêè ïðèíàäëåæíîñòè: ";
             string target;
             cin >> ws;
             getline(cin, target);
@@ -77,74 +82,82 @@ int main() {
             break;
         }
         case 5: {
-            MySet s2;
-            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 2 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾: ";
+            CustomSet s2;
+            cout << "Ââåäèòå 2 ìíîæåñòâî: ";
+            string input2;
             cin >> ws;
-            cin >> s2;
+            getline(cin, input2);
 
-            if (s2.is_valid()) {
-                cout << "Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸: ";
+            try {
+                CustomSet s2(input2.c_str());
+                cout << "Âû ââåëè: ";
                 s2.print();
+
+                CustomSet s = s1 + s2;
+                cout << "Ðåçóëüòàò îáúåäèíåíèÿ: " << s << "\n";
             }
-            else {
-                cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð²Ð²Ð¾Ð´Ðµ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð° Ñ‡ÐµÑ€ÐµÐ· cin.\n";
+            catch (const invalid_argument& e) {
+                cout << "Îøèáêà: " << e.what() << endl;
             }
-            MySet s = s1 + s2;
-            cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << s << "\n";
             break;
         }
         case 6: {
-            MySet s3;
-            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 2 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾: ";
-            cin >> ws;
-            cin >> s3;
+            cout << "Ââåäèòå 2 ìíîæåñòâî: ";
+            string input3;
+            getline(cin >> ws, input3);
 
-            if (s3.is_valid()) {
-                cout << "Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸: ";
-                s3.print();
+            try {
+               CustomSet s3 (input3);
+                 cout << "Âû ââåëè: ";
+                 s3.print();
+                 CustomSet s = s1 * s3;
+                 cout << "Ðåçóëüòàò ïåðåñå÷åíèÿ: " << s << "\n";
+            
             }
-            else {
-                cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð²Ð²Ð¾Ð´Ðµ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð° Ñ‡ÐµÑ€ÐµÐ· cin.\n";
+            catch (const invalid_argument& e) {
+                cout << "Îøèáêà: " << e.what() << endl;
+                return 1;
             }
-            MySet s = s1 * s3;
-            cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << s << "\n";
             break;
         }
         case 7: {
-            MySet s4;
-            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 2 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾: ";
-            cin >> ws;
-            cin >> s4;
+            cout << "Ââåäèòå 2 ìíîæåñòâî: ";
+            string input4;
+            
+            getline(cin >> ws, input4);
 
-            if (s4.is_valid()) {
-                cout << "Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸: ";
+            try {
+                CustomSet s4 (input4);
+                cout << "Âû ââåëè: ";
                 s4.print();
+                CustomSet s = s1 - s4;
+                cout << "Ðåçóëüòàò ðàçíîñòè: " << s << "\n";
+
             }
-            else {
-                cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð²Ð²Ð¾Ð´Ðµ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð° Ñ‡ÐµÑ€ÐµÐ· cin.\n";
+            catch (const invalid_argument& e) {
+                cout << "Îøèáêà: " << e.what() << endl;
+                return 1;
             }
-            MySet s = s1 - s4;
-            cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << s << "\n";
             break;
         }
         case 8: {
-            vector<MySet> boolean = s1.powerset();
+            vector<CustomSet> boolean = s1.powerset();
 
-            cout << "Ð‘ÑƒÐ»ÐµÐ°Ð½ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð° " << s1 << ":" << endl;
-            for (const MySet& subset : boolean) {
+            cout << "Áóëåàí ìíîæåñòâà " << s1 << ":" << endl;
+            for (const CustomSet& subset : boolean) {
                 cout << subset << endl;
             }
             break;
         }
         case 9: {
-            MySet result = s1.cantor_set();
-            cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: ";
+            CustomSet result = s1.cantor_set();
+            cout << "Ðåçóëüòàò: ";
             result.print();
             break;
         }
         }
     }
-  
+
 
     return 0;
 
