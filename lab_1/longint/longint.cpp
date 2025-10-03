@@ -9,7 +9,7 @@ LongInt::LongInt() {
 
 LongInt :: LongInt(const string& integer) {
 	negative = false;
-	if (integer.empty()) throw invalid_argument("Надо ввести число");
+	if (integer.empty()) throw invalid_argument("ГЌГ Г¤Г® ГўГўГҐГ±ГІГЁ Г·ГЁГ±Г«Г®");
 	int startIndex = 0;
 	if (integer[0] == '-') {
 		negative = true;
@@ -21,7 +21,7 @@ LongInt :: LongInt(const string& integer) {
 		}
 		else if (isdigit(integer[i])) digits.push_back(integer[i]);
 		else {
-			throw invalid_argument("Неверно ввели целое число");
+			throw invalid_argument("ГЌГҐГўГҐГ°Г­Г® ГўГўГҐГ«ГЁ Г¶ГҐГ«Г®ГҐ Г·ГЁГ±Г«Г®");
 		}
 	}
 	remove0s();
@@ -69,7 +69,7 @@ istream& operator >>(istream& in, LongInt& num) {
 			num.digits.push_back(integer[i]);
 		}
 		else {
-			throw invalid_argument("Неверно ввели целое число");
+			throw invalid_argument("ГЌГҐГўГҐГ°Г­Г® ГўГўГҐГ«ГЁ Г¶ГҐГ«Г®ГҐ Г·ГЁГ±Г«Г®");
 		}
 	}
 	num.remove0s();
@@ -258,7 +258,7 @@ LongInt& LongInt::operator*=(const LongInt& other) {
 	return *this;
 }
 LongInt LongInt::operator/(const LongInt& other)const {
-	if (other.isZero()) throw invalid_argument("Деление на 0");
+	if (other.isZero()) throw invalid_argument("Г„ГҐГ«ГҐГ­ГЁГҐ Г­Г  0");
 
 	bool isNegative = (negative != other.negative);
 	LongInt dividend = *this;    
@@ -351,7 +351,7 @@ LongInt LongInt::operator--(int) {
 }
 
 void LongInt::compareWith(const LongInt& other) const {
-	cout << "\nРезультаты сравнения:" << endl;
+	cout << "\nР РµР·СѓР»СЊС‚Р°С‚С‹ СЃСЂР°РІРЅРµРЅРёСЏ:" << endl;
 	cout << *this << " == " << other << ": " << (*this == other ? "true" : "false") << endl;
 	cout << *this << " != " << other << ": " << (*this != other ? "true" : "false") << endl;
 	cout << *this << " >  " << other << ": " << (*this > other ? "true" : "false") << endl;
