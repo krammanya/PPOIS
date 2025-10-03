@@ -8,68 +8,68 @@ int main() {
 	LongInt userNumber1("0");
 	while (true) {
 		string input1;
-		cout << "Ââåäèòå ïåğâîå ÷èñëî: ";
+		cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿ĞµÑ€Ğ²Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 		cin >> input1;
 		
 		try {
 			userNumber1=LongInt (input1);
-			cout << "Âû ââåëè: " << userNumber1 << endl;
+			cout << "Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸: " << userNumber1 << endl;
 			break;
 		}
 		catch (const invalid_argument& e) {
-			cout << "Íåêîğğåêòíûé ââîä: " << e.what() << endl;
+			cout << "ĞĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ Ğ²Ğ²Ğ¾Ğ´: " << e.what() << endl;
 		}
 	}
 
 	while (true) {
-		cout << "\n=== Ìåíş ===" << endl;
-		cout << " 0. Âûõîä" << endl;
-		cout << " 1. Ïğåîáğàçîâàíèå äëèííîãî öåëîãî ê öåëîìó" << endl;
-		cout << " 2. Ñëîæåíèå äâóõ äëèííûõ öåëûõ" << endl;
-		cout << " 3. Ñëîæåíèå äëèííîãî öåëîãî ñ öåëûì" << endl;
-		cout << " 4. Âû÷èòàíèå äâóõ äëèííûõ öåëûõ" << endl;
-		cout << " 5. Âû÷èòàíèå èç äëèííîãî öåëîãî öåëîãî" << endl;
-		cout << " 6. Ïğîèçâåäåíèå äâóõ äëèííûõ öåëûõ" << endl;
-		cout << " 7. Ïğîèçâåäåíèå äëèííîãî öåëîãî è öåëîãî" << endl;
-		cout << " 8. Äåëåíèå äâóõ äëèííûõ öåëûõ" << endl;
-		cout << " 9. Äåëåíèå äëèííîãî öåëîãî íà öåëîå" << endl;
-		cout << "10. Ñğàâíåíèå äâóõ äëèííûõ öåëûõ" << endl;
-		cout << "11. Ñğàâíåíèå äëèííîãî öåëîãî ñ öåëûì" << endl;
-		cout << "12. Ïğå- è ïîñòèíêğåìåíò" << endl;
-		cout << "13. Ïğå- è ïîñòäåêğåìåíò" << endl;
-		cout << "Âûáåğèòå îïåğàöèş (0-13): ";
+		cout << "\n=== ĞœĞµĞ½Ñ ===" << endl;
+		cout << " 0. Ğ’Ñ‹Ñ…Ğ¾Ğ´" << endl;
+		cout << " 1. ĞŸÑ€ĞµĞ¾Ğ±Ñ€Ğ°Ğ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾ Ğº Ñ†ĞµĞ»Ğ¾Ğ¼Ñƒ" << endl;
+		cout << " 2. Ğ¡Ğ»Ğ¾Ğ¶ĞµĞ½Ğ¸Ğµ Ğ´Ğ²ÑƒÑ… Ğ´Ğ»Ğ¸Ğ½Ğ½Ñ‹Ñ… Ñ†ĞµĞ»Ñ‹Ñ…" << endl;
+		cout << " 3. Ğ¡Ğ»Ğ¾Ğ¶ĞµĞ½Ğ¸Ğµ Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾ Ñ Ñ†ĞµĞ»Ñ‹Ğ¼" << endl;
+		cout << " 4. Ğ’Ñ‹Ñ‡Ğ¸Ñ‚Ğ°Ğ½Ğ¸Ğµ Ğ´Ğ²ÑƒÑ… Ğ´Ğ»Ğ¸Ğ½Ğ½Ñ‹Ñ… Ñ†ĞµĞ»Ñ‹Ñ…" << endl;
+		cout << " 5. Ğ’Ñ‹Ñ‡Ğ¸Ñ‚Ğ°Ğ½Ğ¸Ğµ Ğ¸Ğ· Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾" << endl;
+		cout << " 6. ĞŸÑ€Ğ¾Ğ¸Ğ·Ğ²ĞµĞ´ĞµĞ½Ğ¸Ğµ Ğ´Ğ²ÑƒÑ… Ğ´Ğ»Ğ¸Ğ½Ğ½Ñ‹Ñ… Ñ†ĞµĞ»Ñ‹Ñ…" << endl;
+		cout << " 7. ĞŸÑ€Ğ¾Ğ¸Ğ·Ğ²ĞµĞ´ĞµĞ½Ğ¸Ğµ Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾ Ğ¸ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾" << endl;
+		cout << " 8. Ğ”ĞµĞ»ĞµĞ½Ğ¸Ğµ Ğ´Ğ²ÑƒÑ… Ğ´Ğ»Ğ¸Ğ½Ğ½Ñ‹Ñ… Ñ†ĞµĞ»Ñ‹Ñ…" << endl;
+		cout << " 9. Ğ”ĞµĞ»ĞµĞ½Ğ¸Ğµ Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾ Ğ½Ğ° Ñ†ĞµĞ»Ğ¾Ğµ" << endl;
+		cout << "10. Ğ¡Ñ€Ğ°Ğ²Ğ½ĞµĞ½Ğ¸Ğµ Ğ´Ğ²ÑƒÑ… Ğ´Ğ»Ğ¸Ğ½Ğ½Ñ‹Ñ… Ñ†ĞµĞ»Ñ‹Ñ…" << endl;
+		cout << "11. Ğ¡Ñ€Ğ°Ğ²Ğ½ĞµĞ½Ğ¸Ğµ Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ†ĞµĞ»Ğ¾Ğ³Ğ¾ Ñ Ñ†ĞµĞ»Ñ‹Ğ¼" << endl;
+		cout << "12. ĞŸÑ€Ğµ- Ğ¸ Ğ¿Ğ¾ÑÑ‚Ğ¸Ğ½ĞºÑ€ĞµĞ¼ĞµĞ½Ñ‚" << endl;
+		cout << "13. ĞŸÑ€Ğµ- Ğ¸ Ğ¿Ğ¾ÑÑ‚Ğ´ĞµĞºÑ€ĞµĞ¼ĞµĞ½Ñ‚" << endl;
+		cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ¾Ğ¿ĞµÑ€Ğ°Ñ†Ğ¸Ñ (0-13): ";
 
 		int choice;
 		cin >> choice;
 		if(choice==0) {
-			cout << "Çàâåğøåíèå ïğîãğàììû.\n";
+			cout << "Ğ—Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ¸Ğµ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñ‹.\n";
 			break;
 		}
 		
 			switch (choice) {
 			case 1: {
 				int result = (int)userNumber1;
-				cout << "Ğåçóëüòàò ïğåîáğàçîâàíèÿ ê int: " << result << endl;
+				cout << "Ğ ĞµĞ·ÑƒĞ»ÑŒÑ‚Ğ°Ñ‚ Ğ¿Ñ€ĞµĞ¾Ğ±Ñ€Ğ°Ğ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ Ğº int: " << result << endl;
 				break;
 			}
 			case 2:
 			{
-				cout << "Ââåäèòå âòîğîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				string input2;
 				cin >> input2;
 				try {
 					LongInt userNumber2(input2);
-					cout << "Âû ââåëè: " << userNumber2 << endl;
+					cout << "Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸: " << userNumber2 << endl;
 					LongInt result = userNumber1 + userNumber2;
 					cout << userNumber1 << " + " << userNumber2 << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Íåêîğğåêòíûé ââîä: " << e.what() << endl;
+					cout << "ĞĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ Ğ²Ğ²Ğ¾Ğ´: " << e.what() << endl;
 				}
 				break;
 			}
 			case 3: {
-				cout << "Ââåäèòå öåëîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				int num;
 				cin >> num;
 				try {
@@ -78,27 +78,27 @@ int main() {
 					cout << userNumber1 << " + " << num << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Îøèáêà: " << e.what() << endl;
+					cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: " << e.what() << endl;
 				}
 				break;
 			}
 			case 4: {
-				cout << "Ââåäèòå âòîğîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				string input2;
 				cin >> input2;
 				try {
 					LongInt userNumber2(input2);
-					cout << "Âû ââåëè: " << userNumber2 << endl;
+					cout << "Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸: " << userNumber2 << endl;
 					LongInt result = userNumber1 - userNumber2;
 					cout << userNumber1 << " - " << userNumber2 << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Íåêîğğåêòíûé ââîä: " << e.what() << endl;
+					cout << "ĞĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ Ğ²Ğ²Ğ¾Ğ´: " << e.what() << endl;
 				}
 				break;
 			}
 			case 5: {
-				cout << "Ââåäèòå öåëîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				int num;
 				cin >> num;
 				try {
@@ -107,27 +107,27 @@ int main() {
 					cout << userNumber1 << " - " << num << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Îøèáêà: " << e.what() << endl;
+					cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: " << e.what() << endl;
 				}
 				break;
 			}
 			case 6: {
-				cout << "Ââåäèòå âòîğîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				string input2;
 				cin >> input2;
 				try {
 					LongInt userNumber2(input2);
-					cout << "Âû ââåëè: " << userNumber2 << endl;
+					cout << "Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸: " << userNumber2 << endl;
 					LongInt result = userNumber1 * userNumber2;
 					cout << userNumber1 << " * " << userNumber2 << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Íåêîğğåêòíûé ââîä: " << e.what() << endl;
+					cout << "ĞĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ Ğ²Ğ²Ğ¾Ğ´: " << e.what() << endl;
 				}
 				break;
 			}
 			case 7: {
-				cout << "Ââåäèòå öåëîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				int num;
 				cin >> num;
 				try {
@@ -136,27 +136,27 @@ int main() {
 					cout << userNumber1 << " * " << num << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Îøèáêà: " << e.what() << endl;
+					cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: " << e.what() << endl;
 				}
 				break;
 			}
 			case 8: {
-				cout << "Ââåäèòå âòîğîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				string input2;
 				cin >> input2;
 				try {
 					LongInt userNumber2(input2);
-					cout << "Âû ââåëè: " << userNumber2 << endl;
+					cout << "Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸: " << userNumber2 << endl;
 					LongInt result = userNumber1 / userNumber2;
 					cout << userNumber1 << " / " << userNumber2 << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Íåêîğğåêòíûé ââîä: " << e.what() << endl;
+					cout << "ĞĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ Ğ²Ğ²Ğ¾Ğ´: " << e.what() << endl;
 				}
 				break;
 			}
 			case 9: {
-				cout << "Ââåäèòå öåëîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				int num;
 				cin >> num;
 				try {
@@ -165,50 +165,50 @@ int main() {
 					cout << userNumber1 << " / " << num << " = " << result << endl;
 				}
 				catch (const invalid_argument& e) {
-					cout << "Îøèáêà: " << e.what() << endl;
+					cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: " << e.what() << endl;
 				}
 				break;
 			}
 			case 10: {
-				cout << "Ââåäèòå âòîğîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				string input2;
 				cin >> input2;
 				try {
 					LongInt userNumber2(input2);
-					cout << "Âû ââåëè: " << userNumber2 << endl;
+					cout << "Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸: " << userNumber2 << endl;
 					userNumber1.compareWith(userNumber2); 
 				}
 				catch (const invalid_argument& e) {
-					cout << "Íåêîğğåêòíûé ââîä: " << e.what() << endl;
+					cout << "ĞĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ Ğ²Ğ²Ğ¾Ğ´: " << e.what() << endl;
 				}
 				break;
 			}
 			case 11: {
-				cout << "Ââåäèòå öåëîå ÷èñëî: ";
+				cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 				int num;
 				cin >> num;
 				try {
 					userNumber1.compareWith(num);  
 				}
 				catch (const invalid_argument& e) {
-					cout << "Îøèáêà: " << e.what() << endl;
+					cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: " << e.what() << endl;
 				}
 				break;
 			}
 			case 12: {
-				cout << "Èñõîäíîå ÷èñëî: " << userNumber1 << endl;
-				cout << "++÷èñëî: " << ++userNumber1 << endl;
-				cout << "Ïîñëå èíêğåìåíòà: " << userNumber1 << endl;
+				cout << "Ğ˜ÑÑ…Ğ¾Ğ´Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: " << userNumber1 << endl;
+				cout << "++Ñ‡Ğ¸ÑĞ»Ğ¾: " << ++userNumber1 << endl;
+				cout << "ĞŸĞ¾ÑĞ»Ğµ Ğ¸Ğ½ĞºÑ€ĞµĞ¼ĞµĞ½Ñ‚Ğ°: " << userNumber1 << endl;
 				break;
 			}
 			case 13: {
-				cout << "Èñõîäíîå ÷èñëî: " << userNumber1 << endl;
-				cout << "--÷èñëî: " << --userNumber1 << endl;
-				cout << "Ïîñëå äåêğåìåíòà: " << userNumber1 << endl;
+				cout << "Ğ˜ÑÑ…Ğ¾Ğ´Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: " << userNumber1 << endl;
+				cout << "--Ñ‡Ğ¸ÑĞ»Ğ¾: " << --userNumber1 << endl;
+				cout << "ĞŸĞ¾ÑĞ»Ğµ Ğ´ĞµĞºÑ€ĞµĞ¼ĞµĞ½Ñ‚Ğ°: " << userNumber1 << endl;
 				break;
 			}
 			default:
-				cout << "Íåâåğíûé âûáîğ îïåğàöèè!" << endl;
+				cout << "ĞĞµĞ²ĞµÑ€Ğ½Ñ‹Ğ¹ Ğ²Ñ‹Ğ±Ğ¾Ñ€ Ğ¾Ğ¿ĞµÑ€Ğ°Ñ†Ğ¸Ğ¸!" << endl;
 				break;
 			}
 	}
