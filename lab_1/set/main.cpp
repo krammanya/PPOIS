@@ -128,15 +128,6 @@ int main() {
                 cout << "Ошибка: " << e.what() << endl;
                 return 1;
             }
-            //if (s3.is_valid()) {
-            //    cout << "Вы ввели: ";
-            //    s3.print();
-            //}
-            //else {
-            //    cout << "Ошибка при вводе множества через cin.\n";
-            //}
-            //CustomSet s = s1 * s3;
-            //cout << "Результат: " << s << "\n";
             break;
         }
         case 7: {
