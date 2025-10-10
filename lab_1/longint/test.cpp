@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../longint.h"
+#include "../LongInt.h"
 #include <sstream>
 
 using namespace std;
