@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../customset.h"
+#include "../CustomSet.h"
 #include <sstream>
 #include <vector>
 
