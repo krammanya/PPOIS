@@ -60,6 +60,7 @@ WaterCostCalculator 2 6 -> 3 Property, WaterMeterReading, Tariff
 ElectricityCostCalculator 2 6 -> 3 Property, ElectricityMeterReading, Tariff
 HeatingCostCalculator 2 6 ->3 Property, HeatingMeterReading, Tariff
 
+всего 53 класса
 всего поля: 201, методы:208 , ассоциации: 90
 
 12 исключений:
