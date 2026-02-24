@@ -1,0 +1,6 @@
+venv/
+data/state.json
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/

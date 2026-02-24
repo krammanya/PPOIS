@@ -1,0 +1,44 @@
+@startuml
+title StudySystem - State Diagram
+
+hide empty description
+skinparam state {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+}
+
+[*] --> NoStudent : load()
+NoStudent --> StudentCreated : create_student()
+
+StudentCreated --> BooksAdded : add_book()
+StudentCreated --> TicketsAdded : add_ticket()
+TicketsAdded --> TicketHasQuestions : add_ticket_question()
+TicketHasQuestions --> TicketLearned : mark_ticket_learned()
+
+BooksAdded --> StudySession : run_read()
+StudentCreated --> StudySession : run_practice()/run_testing()
+TicketHasQuestions --> StudySession : run_ticket_review()
+StudySession --> StudentCreated : complete + history append
+
+StudentCreated --> StudentCreated : status()/last_actions()
+BooksAdded --> BooksAdded : list_books()/find_book()
+TicketsAdded --> TicketsAdded : list_tickets()/find_ticket()
+TicketHasQuestions --> TicketHasQuestions : show_ticket_questions()
+
+StudentCreated --> Error : invalid input / not found
+TicketsAdded --> Error : ticket not found
+TicketsAdded --> Error : review without questions
+Error --> StudentCreated : retry
+
+StudentCreated --> Saved : save()
+BooksAdded --> Saved : save()
+TicketLearned --> Saved : save()
+Saved --> [*] : exit
+
+note right of StudySession
+  schedule() + execute()
+  for Read/Practice/Testing/Review
+end note
+
+@enduml

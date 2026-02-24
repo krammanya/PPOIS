@@ -1,0 +1,134 @@
+@startuml
+title StudySystem - Class Diagram
+
+hide empty members
+skinparam classAttributeIconSize 0
+
+abstract class StudyMaterial {
+  +title: str
+  +subject: str
+  +is_available: bool
+  +get_info(): str
+}
+
+class Book {
+  +author: str
+  +pages: int
+  +current_page: int
+  +get_info(): str
+  +read_page(): str
+}
+
+class Student {
+  +name: str
+  +surname: str
+  +group: int
+  +tickets: List<Ticket>
+  +get_full_name(): str
+  +add_ticket(ticket: Ticket): None
+}
+
+class Ticket {
+  +number: int
+  +questions: List<str>
+  +is_learned: bool
+  +add_question(question: str): None
+  +mark_as_learned(): None
+}
+
+class Time {
+  +hours: int
+  +minutes: int
+  +to_minutes(): int
+  +from_minutes(minutes: int): Time
+  +add(other: Time): Time
+}
+
+abstract class Method {
+  +name: str
+  +duration: Time
+  +is_completed: bool
+  +start_time: Time
+  +end_time: Time
+  +set_duration(minutes: int): None
+  +get_duration(): int
+  +schedule(start_time: Time): str
+  +execute(): str
+}
+
+class Read {
+  +book: Book
+  +pages_read: int
+  +set_book(book: Book): None
+  +execute(): str
+}
+
+class Practice {
+  +task_count: int
+  +task_done: int
+  +execute(): str
+}
+
+class Testing {
+  +questions: int
+  +correct_answers: int
+  +execute(): str
+}
+
+class Review {
+  +topics: List<str>
+  +reviewed_topics: List<str>
+  +execute(): str
+}
+
+class StudySystem {
+  +student: Student
+  +books: List<Book>
+  +tickets: List<Ticket>
+  +history: List<str>
+  +create_student(name: str, surname: str, group: int): None
+  +add_book(title: str, subject: str, author: str, pages: int): Book
+  +list_books(): str
+  +find_book(title: str): Book
+  +add_ticket(number: int): Ticket
+  +add_ticket_question(number: int, question: str): None
+  +find_ticket(number: int): Ticket
+  +list_tickets(): str
+  +mark_ticket_learned(number: int): None
+  +run_read(book_title: str, minutes: int, start_time: Time): str
+  +run_practice(task_count: int, minutes: int, start_time: Time): str
+  +run_testing(questions: int, minutes: int, start_time: Time): str
+  +run_ticket_review(ticket_number: int, minutes: int, start_time: Time): str
+  +status(): str
+  +last_actions(n: int = 10): str
+  +show_ticket_questions(number: int): str
+  +to_dict(): dict
+  +from_dict(data: dict): StudySystem
+}
+
+class Storage <<utility>> {
+  +save(system: StudySystem): None
+  +load(): StudySystem
+}
+
+StudyMaterial <|-- Book
+Method <|-- Read
+Method <|-- Practice
+Method <|-- Testing
+Method <|-- Review
+
+StudySystem "1" o-- "0..1" Student : student
+StudySystem "1" o-- "*" Book : books
+StudySystem "1" o-- "*" Ticket : tickets
+Student "1" o-- "*" Ticket : tickets
+
+Method --> Time : duration/start/end
+Read --> Book : book
+
+StudySystem ..> Read
+StudySystem ..> Practice
+StudySystem ..> Testing
+StudySystem ..> Review
+Storage ..> StudySystem
+
+@enduml
