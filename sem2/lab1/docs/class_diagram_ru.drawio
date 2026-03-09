@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram id="class-ru-1" name="Диаграмма классов UML">
+    <mxGraphModel dx="1612" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="study_system" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=14;" value="СистемаПодготовки (StudySystem)&#xa;-----------------------------&#xa;- студент: Student | None&#xa;- книги: Список&lt;Book&gt;&#xa;- билеты: Список&lt;Ticket&gt;&#xa;- история: Список&lt;str&gt;&#xa;-----------------------------&#xa;+ создать_студента(name, surname, group)&#xa;+ добавить_книгу(title, subject, author, pages)&#xa;+ добавить_билет(number)&#xa;+ добавить_вопрос_в_билет(number, question)&#xa;+ отметить_билет_выученным(number)&#xa;+ запустить_чтение(book_title, minutes, start_time)&#xa;+ запустить_практику(task_count, minutes, start_time)&#xa;+ запустить_тестирование(questions, minutes, start_time)&#xa;+ повторить_билет(ticket_number, minutes, start_time)&#xa;+ статус()&#xa;+ последние_действия(n)&#xa;+ в_словарь() / из_словаря(data)" vertex="1">
+          <mxGeometry height="370" width="660" x="760" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="material" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=13;" value="АбстрактныйУчебныйМатериал (StudyMaterial)&#xa;-----------------------------&#xa;- название: str&#xa;- предмет: str&#xa;- доступен: bool&#xa;-----------------------------&#xa;+ получить_инфо(): str {abstract}" vertex="1">
+          <mxGeometry height="180" width="380" x="90" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="book" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=13;" value="Книга (Book)&#xa;-----------------------------&#xa;- автор: str&#xa;- страниц: int&#xa;- текущая_страница: int&#xa;-----------------------------&#xa;+ получить_инфо(): str&#xa;+ читать_страницу(): str" vertex="1">
+          <mxGeometry height="190" width="330" x="130" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="method" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=13;" value="АбстрактныйМетодОбучения (Method)&#xa;-----------------------------&#xa;- имя: str&#xa;- длительность: Time&#xa;- завершен: bool&#xa;- время_начала: Time | None&#xa;- время_конца: Time | None&#xa;-----------------------------&#xa;+ задать_длительность(minutes)&#xa;+ получить_длительность(): int&#xa;+ запланировать(start_time: Time): str&#xa;+ выполнить(): str {abstract}" vertex="1">
+          <mxGeometry height="260" width="420" x="480" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="read" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=12;" value="Чтение (Read)&#xa;-----------------------------&#xa;- книга: Book | None&#xa;- прочитано_страниц: int&#xa;-----------------------------&#xa;+ задать_книгу(book)&#xa;+ выполнить(): str" vertex="1">
+          <mxGeometry height="190" width="280" x="180" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="practice" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=12;" value="Практика (Practice)&#xa;-----------------------------&#xa;- всего_задач: int&#xa;- решено_задач: int&#xa;-----------------------------&#xa;+ выполнить(): str" vertex="1">
+          <mxGeometry height="170" width="250" x="500" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="testing" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=12;" value="Тестирование (Testing)&#xa;-----------------------------&#xa;- всего_вопросов: int&#xa;- выполнено: int&#xa;-----------------------------&#xa;+ выполнить(): str" vertex="1">
+          <mxGeometry height="170" width="250" x="790" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="review" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=12;" value="Повторение (Review)&#xa;-----------------------------&#xa;- темы: Список&lt;str&gt;&#xa;- повторено: Список&lt;str&gt;&#xa;-----------------------------&#xa;+ выполнить(): str" vertex="1">
+          <mxGeometry height="170" width="270" x="1140" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="time" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=13;" value="Время (Time)&#xa;-----------------------------&#xa;- часы: int&#xa;- минуты: int&#xa;-----------------------------&#xa;+ в_минуты(): int&#xa;+ из_минут(minutes): Time&#xa;+ добавить(other: Time): Time" vertex="1">
+          <mxGeometry height="220" width="320" x="1490" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="student" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=13;" value="Студент (Student)&#xa;-----------------------------&#xa;- имя: str&#xa;- фамилия: str&#xa;- группа: int&#xa;- билеты: Список&lt;Ticket&gt;&#xa;-----------------------------&#xa;+ полное_имя(): str&#xa;+ добавить_билет(ticket): None" vertex="1">
+          <mxGeometry height="230" width="330" x="1490" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=13;" value="Билет (Ticket)&#xa;-----------------------------&#xa;- номер: int&#xa;- вопросы: Список&lt;str&gt;&#xa;- выучен: bool&#xa;-----------------------------&#xa;+ добавить_вопрос(question): None&#xa;+ отметить_как_выученный(): None" vertex="1">
+          <mxGeometry height="220" width="330" x="1490" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="storage" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;strokeColor=#000000;fillColor=#ffffff;fontSize=13;" value="ХранилищеСостояния (storage.py)&#xa;-----------------------------&#xa;+ сохранить(system: StudySystem): None&#xa;+ загрузить(): StudySystem" vertex="1">
+          <mxGeometry height="140" width="330" x="1490" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="inh_book_material" edge="1" parent="1" source="book" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=14;strokeColor=#000000;fontSize=12;" target="material" value="наследование">
+          <mxGeometry relative="1" x="0.2387" y="40" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inh_read_method" edge="1" parent="1" source="read" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=14;strokeColor=#000000;fontSize=12;" target="method" value="наследование">
+          <mxGeometry relative="1" x="-0.7648" y="135" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="490" y="955" />
+              <mxPoint x="490" y="840" />
+              <mxPoint x="690" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inh_practice_method" edge="1" parent="1" source="practice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=14;strokeColor=#000000;fontSize=12;" target="method" value="наследование">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="625" y="815" />
+              <mxPoint x="690" y="815" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inh_testing_method" edge="1" parent="1" source="testing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=14;strokeColor=#000000;fontSize=12;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" value="наследование">
+          <mxGeometry relative="1" x="-0.2002" y="15" as="geometry">
+            <mxPoint x="-1" as="offset" />
+            <mxPoint x="984.94" y="850" as="sourcePoint" />
+            <mxPoint x="759.9988235294118" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inh_review_method" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=14;strokeColor=#000000;fontSize=12;entryX=0.855;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.824;exitDx=0;exitDy=0;exitPerimeter=0;" target="method" value="наследование">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="1000" />
+              <mxPoint x="1130" y="988" />
+              <mxPoint x="1120" y="988" />
+              <mxPoint x="1120" y="980" />
+              <mxPoint x="1130" y="980" />
+              <mxPoint x="1130" y="758" />
+            </Array>
+            <mxPoint x="1110" y="1000" as="sourcePoint" />
+            <mxPoint x="729.9988235294118" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc_system_student" edge="1" parent="1" source="study_system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#000000;fontSize=12;" target="student" value="композиция&#xa;1 -&gt; 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_system_books" edge="1" parent="1" source="study_system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#000000;fontSize=12;" target="book" value="композиция&#xa;1 -&gt; 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_system_tickets" edge="1" parent="1" source="study_system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#000000;fontSize=12;" target="ticket" value="композиция&#xa;1 -&gt; 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_student_ticket" edge="1" parent="1" source="student" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#000000;fontSize=12;" target="ticket" value="агрегация&#xa;1 -&gt; 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_method_time" edge="1" parent="1" source="method" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;strokeColor=#000000;fontSize=12;" target="time" value="использует&#xa;duration/start/end: Time">
+          <mxGeometry relative="1" x="0.0492" y="10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc_read_book" edge="1" parent="1" source="read" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;strokeColor=#000000;fontSize=12;" target="book" value="содержит ссылку на Book">
+          <mxGeometry relative="1" x="0.0698" y="45" as="geometry">
+            <mxPoint y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep_system_read" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;strokeColor=#000000;fontSize=12;" value="создает">
+          <mxGeometry relative="1" x="0.4648" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="760" y="259.9988235294117" as="sourcePoint" />
+            <mxPoint x="320.0588235294117" y="884.94" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep_system_practice" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;strokeColor=#000000;fontSize=12;" value="создает">
+          <mxGeometry relative="1" x="0.2816" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="470" y="269.94" />
+              <mxPoint x="470" y="979.94" />
+            </Array>
+            <mxPoint x="760" y="269.9988235294117" as="sourcePoint" />
+            <mxPoint x="500" y="979.998823529412" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep_system_testing" edge="1" parent="1" source="study_system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;strokeColor=#000000;fontSize=12;" target="testing" value="создает">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_system_review" edge="1" parent="1" source="study_system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;strokeColor=#000000;fontSize=12;" target="review" value="создает">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_storage_system" edge="1" parent="1" source="storage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;strokeColor=#000000;fontSize=12;" target="study_system" value="зависимость">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
