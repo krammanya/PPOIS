@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sportsmen>
+  <sportsman><full_name>Алексей Воронов</full_name><team>Минские Ястребы</team><position>Нападающий</position><titles>4</titles><sport>Футбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Игорь Соколов</full_name><team>Гомельские Волны</team><position>Защитник</position><titles>2</titles><sport>Футбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Павел Руденко</full_name><team>Витебский Метеор</team><position>Полузащитник</position><titles>5</titles><sport>Футбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Никита Беляев</full_name><team>Гродненский Форвард</team><position>Вратарь</position><titles>1</titles><sport>Футбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Денис Марченко</full_name><team>Брестские Звезды</team><position>Нападающий</position><titles>3</titles><sport>Футбол</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Андрей Лавров</full_name><team>Полесские Барсы</team><position>Центральный защитник</position><titles>6</titles><sport>Футбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Сергей Кравцов</full_name><team>Днепровские Львы</team><position>Опорный полузащитник</position><titles>2</titles><sport>Футбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Максим Ермаков</full_name><team>Березинские Соколы</team><position>Левый защитник</position><titles>4</titles><sport>Футбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Владислав Чернов</full_name><team>Могилевский Рубеж</team><position>Правый защитник</position><titles>2</titles><sport>Футбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Роман Дроздов</full_name><team>Несвижский Замок</team><position>Атакующий полузащитник</position><titles>7</titles><sport>Футбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Егор Савицкий</full_name><team>Минские Ястребы</team><position>Диагональный</position><titles>5</titles><sport>Волейбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Кирилл Селиванов</full_name><team>Гомельские Волны</team><position>Связующий</position><titles>3</titles><sport>Волейбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Антон Щербаков</full_name><team>Витебский Метеор</team><position>Либеро</position><titles>4</titles><sport>Волейбол</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Дмитрий Карташов</full_name><team>Гродненский Форвард</team><position>Центральный блокирующий</position><titles>6</titles><sport>Волейбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Олег Пашкевич</full_name><team>Брестские Звезды</team><position>Доигровщик</position><titles>2</titles><sport>Волейбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Степан Гущин</full_name><team>Полесские Барсы</team><position>Связующий</position><titles>1</titles><sport>Волейбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Михаил Третьяк</full_name><team>Днепровские Львы</team><position>Диагональный</position><titles>5</titles><sport>Волейбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Артем Гордеев</full_name><team>Березинские Соколы</team><position>Либеро</position><titles>2</titles><sport>Волейбол</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Илья Туров</full_name><team>Могилевский Рубеж</team><position>Доигровщик</position><titles>7</titles><sport>Волейбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Тимофей Лебедев</full_name><team>Несвижский Замок</team><position>Центральный блокирующий</position><titles>3</titles><sport>Волейбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Глеб Нестеров</full_name><team>Минские Ястребы</team><position>Спринтер</position><titles>8</titles><sport>Легкая атлетика</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Виктор Зуев</full_name><team>Гомельские Волны</team><position>Бегун на 400 м</position><titles>3</titles><sport>Легкая атлетика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Леонид Бабич</full_name><team>Витебский Метеор</team><position>Прыгун в длину</position><titles>4</titles><sport>Легкая атлетика</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Руслан Жаров</full_name><team>Гродненский Форвард</team><position>Метатель копья</position><titles>6</titles><sport>Легкая атлетика</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Григорий Фомин</full_name><team>Брестские Звезды</team><position>Бегун на 800 м</position><titles>2</titles><sport>Легкая атлетика</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Петр Климов</full_name><team>Полесские Барсы</team><position>Барьерист</position><titles>1</titles><sport>Легкая атлетика</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Ярослав Мельник</full_name><team>Днепровские Львы</team><position>Толкатель ядра</position><titles>5</titles><sport>Легкая атлетика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Валентин Орлов</full_name><team>Березинские Соколы</team><position>Марафонец</position><titles>7</titles><sport>Легкая атлетика</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Назар Кудряшов</full_name><team>Могилевский Рубеж</team><position>Прыгун в высоту</position><titles>3</titles><sport>Легкая атлетика</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Федор Дьяков</full_name><team>Несвижский Замок</team><position>Десятиборец</position><titles>4</titles><sport>Легкая атлетика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Матвей Корнилов</full_name><team>Минские Ястребы</team><position>Пилот-одиночка</position><titles>6</titles><sport>Гребля</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Константин Сурков</full_name><team>Гомельские Волны</team><position>Рулевой</position><titles>2</titles><sport>Гребля</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Борис Ефремов</full_name><team>Витебский Метеор</team><position>Загребной</position><titles>5</titles><sport>Гребля</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Евгений Малинин</full_name><team>Гродненский Форвард</team><position>Кормовой</position><titles>3</titles><sport>Гребля</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Артур Гуляев</full_name><team>Брестские Звезды</team><position>Пилот-двойка</position><titles>7</titles><sport>Гребля</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Вячеслав Пронин</full_name><team>Полесские Барсы</team><position>Рулевой</position><titles>1</titles><sport>Гребля</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Станислав Чижов</full_name><team>Днепровские Львы</team><position>Загребной</position><titles>4</titles><sport>Гребля</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Юрий Поляков</full_name><team>Березинские Соколы</team><position>Кормовой</position><titles>2</titles><sport>Гребля</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Василий Демидов</full_name><team>Могилевский Рубеж</team><position>Пилот-четверка</position><titles>5</titles><sport>Гребля</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Геннадий Литвинов</full_name><team>Несвижский Замок</team><position>Рулевой</position><titles>3</titles><sport>Гребля</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Иван Мостовой</full_name><team>Минские Ястребы</team><position>Защитник</position><titles>4</titles><sport>Хоккей</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Николай Енин</full_name><team>Гомельские Волны</team><position>Вратарь</position><titles>6</titles><sport>Хоккей</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Даниил Берестов</full_name><team>Витебский Метеор</team><position>Центрфорвард</position><titles>2</titles><sport>Хоккей</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Платон Самойлов</full_name><team>Гродненский Форвард</team><position>Крайний нападающий</position><titles>3</titles><sport>Хоккей</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Родион Харитонов</full_name><team>Брестские Звезды</team><position>Защитник</position><titles>5</titles><sport>Хоккей</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Семен Алешин</full_name><team>Полесские Барсы</team><position>Левый нападающий</position><titles>1</titles><sport>Хоккей</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Георгий Тимофеев</full_name><team>Днепровские Львы</team><position>Правый нападающий</position><titles>4</titles><sport>Хоккей</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Марат Черкасов</full_name><team>Березинские Соколы</team><position>Вратарь</position><titles>7</titles><sport>Хоккей</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Тарас Федосов</full_name><team>Могилевский Рубеж</team><position>Защитник</position><titles>2</titles><sport>Хоккей</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Аркадий Ларионов</full_name><team>Несвижский Замок</team><position>Центрфорвард</position><titles>6</titles><sport>Хоккей</sport><rank>КМС</rank></sportsman>
+<sportsman><full_name>Алексей Воронов</full_name><team>Минские Ястребы</team><position>Нападающий</position><titles>4</titles><sport>Футбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Игорь Соколов</full_name><team>Гомельские Волны</team><position>Защитник</position><titles>2</titles><sport>Футбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Павел Руденко</full_name><team>Витебский Метеор</team><position>Полузащитник</position><titles>5</titles><sport>Футбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Никита Беляев</full_name><team>Гродненский Форвард</team><position>Вратарь</position><titles>1</titles><sport>Футбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Денис Марченко</full_name><team>Брестские Звезды</team><position>Нападающий</position><titles>3</titles><sport>Футбол</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Андрей Лавров</full_name><team>Полесские Барсы</team><position>Центральный защитник</position><titles>6</titles><sport>Футбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Сергей Кравцов</full_name><team>Днепровские Львы</team><position>Опорный полузащитник</position><titles>2</titles><sport>Футбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Максим Ермаков</full_name><team>Березинские Соколы</team><position>Левый защитник</position><titles>4</titles><sport>Футбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Владислав Чернов</full_name><team>Могилевский Рубеж</team><position>Правый защитник</position><titles>2</titles><sport>Футбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Роман Дроздов</full_name><team>Несвижский Замок</team><position>Атакующий полузащитник</position><titles>7</titles><sport>Футбол</sport><rank>Мастер спорта</rank></sportsman>
+  </sportsmen>

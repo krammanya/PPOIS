@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sportsmen>
+  <sportsman><full_name>Алина Ковалева</full_name><team>Минские Ласточки</team><position>Разыгрывающий защитник</position><titles>5</titles><sport>Баскетбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Мария Тихонова</full_name><team>Гомельские Искры</team><position>Центровой</position><titles>7</titles><sport>Баскетбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Екатерина Носова</full_name><team>Витебская Орбита</team><position>Легкий форвард</position><titles>2</titles><sport>Баскетбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Виктория Рябова</full_name><team>Гродненские Пантеры</team><position>Тяжелый форвард</position><titles>3</titles><sport>Баскетбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Полина Лукина</full_name><team>Брестские Кометы</team><position>Атакующий защитник</position><titles>4</titles><sport>Баскетбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Дарья Шестакова</full_name><team>Пинские Лилии</team><position>Разыгрывающий защитник</position><titles>1</titles><sport>Баскетбол</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Софья Емельянова</full_name><team>Днепровские Кометы</team><position>Центровой</position><titles>6</titles><sport>Баскетбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Ольга Фролова</full_name><team>Березинские Лисы</team><position>Легкий форвард</position><titles>2</titles><sport>Баскетбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Наталья Боброва</full_name><team>Могилевские Вершины</team><position>Атакующий защитник</position><titles>5</titles><sport>Баскетбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Таисия Грачева</full_name><team>Несвижские Фениксы</team><position>Тяжелый форвард</position><titles>3</titles><sport>Баскетбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Анна Быкова</full_name><team>Минские Ласточки</team><position>Баттер</position><titles>4</titles><sport>Теннис</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Кира Морозова</full_name><team>Гомельские Искры</team><position>Игрок задней линии</position><titles>6</titles><sport>Теннис</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Лилия Зверева</full_name><team>Витебская Орбита</team><position>Универсал</position><titles>2</titles><sport>Теннис</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Юлия Назарова</full_name><team>Гродненские Пантеры</team><position>Сервер</position><titles>5</titles><sport>Теннис</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Вероника Сазонова</full_name><team>Брестские Кометы</team><position>Игрок у сетки</position><titles>3</titles><sport>Теннис</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Ангелина Баринова</full_name><team>Пинские Лилии</team><position>Баттер</position><titles>1</titles><sport>Теннис</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Ксения Романова</full_name><team>Днепровские Кометы</team><position>Игрок задней линии</position><titles>4</titles><sport>Теннис</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Ульяна Киселева</full_name><team>Березинские Лисы</team><position>Универсал</position><titles>7</titles><sport>Теннис</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Злата Брагина</full_name><team>Могилевские Вершины</team><position>Игрок у сетки</position><titles>2</titles><sport>Теннис</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Милана Рудь</full_name><team>Несвижские Фениксы</team><position>Сервер</position><titles>5</titles><sport>Теннис</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Елена Платонова</full_name><team>Минские Ласточки</team><position>Спринтер</position><titles>8</titles><sport>Плавание</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Диана Климчук</full_name><team>Гомельские Искры</team><position>Брассист</position><titles>3</titles><sport>Плавание</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Нина Харламова</full_name><team>Витебская Орбита</team><position>Баттерфляй</position><titles>4</titles><sport>Плавание</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Яна Тимошенко</full_name><team>Гродненские Пантеры</team><position>Кроль на спине</position><titles>2</titles><sport>Плавание</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Валерия Сорокина</full_name><team>Брестские Кометы</team><position>Комплексное плавание</position><titles>6</titles><sport>Плавание</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Марина Завьялова</full_name><team>Пинские Лилии</team><position>Спринтер</position><titles>1</titles><sport>Плавание</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Ирина Чумакова</full_name><team>Днепровские Кометы</team><position>Брассист</position><titles>5</titles><sport>Плавание</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Алёна Свиридова</full_name><team>Березинские Лисы</team><position>Баттерфляй</position><titles>2</titles><sport>Плавание</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Лариса Веденеева</full_name><team>Могилевские Вершины</team><position>Кроль на спине</position><titles>7</titles><sport>Плавание</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Светлана Корнеева</full_name><team>Несвижские Фениксы</team><position>Комплексное плавание</position><titles>3</titles><sport>Плавание</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Дарина Егорова</full_name><team>Минские Ласточки</team><position>Флайер</position><titles>4</titles><sport>Спортивная гимнастика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Людмила Островская</full_name><team>Гомельские Искры</team><position>Брусья</position><titles>6</titles><sport>Спортивная гимнастика</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Ева Макарова</full_name><team>Витебская Орбита</team><position>Бревно</position><titles>2</titles><sport>Спортивная гимнастика</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Арина Лапина</full_name><team>Гродненские Пантеры</team><position>Опорный прыжок</position><titles>3</titles><sport>Спортивная гимнастика</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Елизавета Прохорова</full_name><team>Брестские Кометы</team><position>Вольные упражнения</position><titles>5</titles><sport>Спортивная гимнастика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Тамара Лаврентьева</full_name><team>Пинские Лилии</team><position>Брусья</position><titles>1</titles><sport>Спортивная гимнастика</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Галина Колесник</full_name><team>Днепровские Кометы</team><position>Флайер</position><titles>4</titles><sport>Спортивная гимнастика</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Любовь Архипова</full_name><team>Березинские Лисы</team><position>Бревно</position><titles>7</titles><sport>Спортивная гимнастика</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Инна Громова</full_name><team>Могилевские Вершины</team><position>Опорный прыжок</position><titles>2</titles><sport>Спортивная гимнастика</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Александра Рудова</full_name><team>Несвижские Фениксы</team><position>Вольные упражнения</position><titles>5</titles><sport>Спортивная гимнастика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Маргарита Котова</full_name><team>Минские Ласточки</team><position>Стартер</position><titles>3</titles><sport>Биатлон</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Алина Пичугина</full_name><team>Гомельские Искры</team><position>Финишер</position><titles>6</titles><sport>Биатлон</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Татьяна Долгова</full_name><team>Витебская Орбита</team><position>Снайпер</position><titles>2</titles><sport>Биатлон</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Оксана Беликова</full_name><team>Гродненские Пантеры</team><position>Универсал</position><titles>4</titles><sport>Биатлон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Кристина Лосева</full_name><team>Брестские Кометы</team><position>Лидер эстафеты</position><titles>5</titles><sport>Биатлон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Вера Никифорова</full_name><team>Пинские Лилии</team><position>Стартер</position><titles>1</titles><sport>Биатлон</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Жанна Шмелева</full_name><team>Днепровские Кометы</team><position>Финишер</position><titles>3</titles><sport>Биатлон</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Карина Фомина</full_name><team>Березинские Лисы</team><position>Снайпер</position><titles>7</titles><sport>Биатлон</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Олеся Черепанова</full_name><team>Могилевские Вершины</team><position>Универсал</position><titles>2</titles><sport>Биатлон</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Василиса Давыдова</full_name><team>Несвижские Фениксы</team><position>Лидер эстафеты</position><titles>4</titles><sport>Биатлон</sport><rank>КМС</rank></sportsman>
+<sportsman><full_name>Алина Ковалева</full_name><team>Минские Ласточки</team><position>Разыгрывающий защитник</position><titles>5</titles><sport>Баскетбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Мария Тихонова</full_name><team>Гомельские Искры</team><position>Центровой</position><titles>7</titles><sport>Баскетбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Екатерина Носова</full_name><team>Витебская Орбита</team><position>Легкий форвард</position><titles>2</titles><sport>Баскетбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Виктория Рябова</full_name><team>Гродненские Пантеры</team><position>Тяжелый форвард</position><titles>3</titles><sport>Баскетбол</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Полина Лукина</full_name><team>Брестские Кометы</team><position>Атакующий защитник</position><titles>4</titles><sport>Баскетбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Дарья Шестакова</full_name><team>Пинские Лилии</team><position>Разыгрывающий защитник</position><titles>1</titles><sport>Баскетбол</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Софья Емельянова</full_name><team>Днепровские Кометы</team><position>Центровой</position><titles>6</titles><sport>Баскетбол</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Ольга Фролова</full_name><team>Березинские Лисы</team><position>Легкий форвард</position><titles>2</titles><sport>Баскетбол</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Наталья Боброва</full_name><team>Могилевские Вершины</team><position>Атакующий защитник</position><titles>5</titles><sport>Баскетбол</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Таисия Грачева</full_name><team>Несвижские Фениксы</team><position>Тяжелый форвард</position><titles>3</titles><sport>Баскетбол</sport><rank>3-й разряд</rank></sportsman>
+  </sportsmen>

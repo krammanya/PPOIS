@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sportsmen>
+  <sportsman><full_name>Артемий Коваленко</full_name><team>Столичные Ракетки</team><position>Игрок первой пары</position><titles>5</titles><sport>Бадминтон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Богдан Шаповалов</full_name><team>Гомельские Ракеты</team><position>Игрок второй пары</position><titles>2</titles><sport>Бадминтон</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Владимир Ткаченко</full_name><team>Витебский Драйв</team><position>Одиночник</position><titles>6</titles><sport>Бадминтон</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Герман Жданов</full_name><team>Гродненский Смэш</team><position>Игрок смешанной пары</position><titles>3</titles><sport>Бадминтон</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Давид Киселев</full_name><team>Брестские Воланы</team><position>Одиночник</position><titles>4</titles><sport>Бадминтон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Елисей Панкратов</full_name><team>Пинский Пульс</team><position>Игрок первой пары</position><titles>1</titles><sport>Бадминтон</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Жорж Минин</full_name><team>Днепровский Темп</team><position>Игрок второй пары</position><titles>5</titles><sport>Бадминтон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Захар Филиппов</full_name><team>Березинский Вектор</team><position>Игрок смешанной пары</position><titles>2</titles><sport>Бадминтон</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Ильдар Синицын</full_name><team>Могилевский Ритм</team><position>Одиночник</position><titles>7</titles><sport>Бадминтон</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Клим Усов</full_name><team>Несвижский Удар</team><position>Игрок первой пары</position><titles>3</titles><sport>Бадминтон</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Лев Титов</full_name><team>Столичные Ракетки</team><position>Тяжелый вес</position><titles>6</titles><sport>Бокс</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Мирон Абрамов</full_name><team>Гомельские Ракеты</team><position>Полусредний вес</position><titles>2</titles><sport>Бокс</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Никон Калашников</full_name><team>Витебский Драйв</team><position>Легкий вес</position><titles>4</titles><sport>Бокс</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Остап Бессонов</full_name><team>Гродненский Смэш</team><position>Средний вес</position><titles>5</titles><sport>Бокс</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Прохор Данилов</full_name><team>Брестские Воланы</team><position>Тяжелый вес</position><titles>3</titles><sport>Бокс</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Ростислав Дубов</full_name><team>Пинский Пульс</team><position>Полусредний вес</position><titles>1</titles><sport>Бокс</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Святослав Логинов</full_name><team>Днепровский Темп</team><position>Легкий вес</position><titles>4</titles><sport>Бокс</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Тихон Яковлев</full_name><team>Березинский Вектор</team><position>Средний вес</position><titles>7</titles><sport>Бокс</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Устин Молчанов</full_name><team>Могилевский Ритм</team><position>Тяжелый вес</position><titles>2</titles><sport>Бокс</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Филипп Крылов</full_name><team>Несвижский Удар</team><position>Полусредний вес</position><titles>5</titles><sport>Бокс</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Харитон Краснов</full_name><team>Столичные Ракетки</team><position>Опорный борец</position><titles>4</titles><sport>Борьба</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Цезарь Лаптев</full_name><team>Гомельские Ракеты</team><position>Техничный борец</position><titles>6</titles><sport>Борьба</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Чеслав Гулякин</full_name><team>Витебский Драйв</team><position>Силовой борец</position><titles>2</titles><sport>Борьба</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Шамиль Осипов</full_name><team>Гродненский Смэш</team><position>Контратакующий</position><titles>3</titles><sport>Борьба</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Эмиль Матвеев</full_name><team>Брестские Воланы</team><position>Опорный борец</position><titles>5</titles><sport>Борьба</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Юлиан Дорофеев</full_name><team>Пинский Пульс</team><position>Техничный борец</position><titles>1</titles><sport>Борьба</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Яков Гришин</full_name><team>Днепровский Темп</team><position>Силовой борец</position><titles>4</titles><sport>Борьба</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Адам Князев</full_name><team>Березинский Вектор</team><position>Контратакующий</position><titles>7</titles><sport>Борьба</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Бронислав Ульянов</full_name><team>Могилевский Ритм</team><position>Опорный борец</position><titles>2</titles><sport>Борьба</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Вениамин Стрелков</full_name><team>Несвижский Удар</team><position>Техничный борец</position><titles>5</titles><sport>Борьба</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Глеб Арсентьев</full_name><team>Столичные Ракетки</team><position>Штангист</position><titles>6</titles><sport>Тяжелая атлетика</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Демьян Суворов</full_name><team>Гомельские Ракеты</team><position>Толчок</position><titles>2</titles><sport>Тяжелая атлетика</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Егорий Зимин</full_name><team>Витебский Драйв</team><position>Рывок</position><titles>4</titles><sport>Тяжелая атлетика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Ждан Терехов</full_name><team>Гродненский Смэш</team><position>Штангист</position><titles>3</titles><sport>Тяжелая атлетика</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Зиновий Гурьев</full_name><team>Брестские Воланы</team><position>Толчок</position><titles>5</titles><sport>Тяжелая атлетика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Ираклий Белоусов</full_name><team>Пинский Пульс</team><position>Рывок</position><titles>1</titles><sport>Тяжелая атлетика</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Касьян Муравьев</full_name><team>Днепровский Темп</team><position>Штангист</position><titles>4</titles><sport>Тяжелая атлетика</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Лукьян Добрынин</full_name><team>Березинский Вектор</team><position>Толчок</position><titles>7</titles><sport>Тяжелая атлетика</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Мефодий Жилин</full_name><team>Могилевский Ритм</team><position>Рывок</position><titles>2</titles><sport>Тяжелая атлетика</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Наум Копылов</full_name><team>Несвижский Удар</team><position>Штангист</position><titles>5</titles><sport>Тяжелая атлетика</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Онуфрий Блинов</full_name><team>Столичные Ракетки</team><position>Экипаж двойки</position><titles>3</titles><sport>Велоспорт</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Панкрат Леонтьев</full_name><team>Гомельские Ракеты</team><position>Гонщик преследования</position><titles>6</titles><sport>Велоспорт</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Ратмир Агеев</full_name><team>Витебский Драйв</team><position>Спринтер</position><titles>2</titles><sport>Велоспорт</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Самсон Ларионов</full_name><team>Гродненский Смэш</team><position>Шоссейник</position><titles>4</titles><sport>Велоспорт</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Трофим Овчинников</full_name><team>Брестские Воланы</team><position>Маунтинбайкер</position><titles>5</titles><sport>Велоспорт</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Ульян Трофимов</full_name><team>Пинский Пульс</team><position>Экипаж двойки</position><titles>1</titles><sport>Велоспорт</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Фома Евсеев</full_name><team>Днепровский Темп</team><position>Гонщик преследования</position><titles>3</titles><sport>Велоспорт</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Юрийан Серов</full_name><team>Березинский Вектор</team><position>Спринтер</position><titles>7</titles><sport>Велоспорт</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Эдуард Лебединский</full_name><team>Могилевский Ритм</team><position>Шоссейник</position><titles>2</titles><sport>Велоспорт</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Ян Миронов</full_name><team>Несвижский Удар</team><position>Маунтинбайкер</position><titles>4</titles><sport>Велоспорт</sport><rank>КМС</rank></sportsman>
+<sportsman><full_name>Артемий Коваленко</full_name><team>Столичные Ракетки</team><position>Игрок первой пары</position><titles>5</titles><sport>Бадминтон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Богдан Шаповалов</full_name><team>Гомельские Ракеты</team><position>Игрок второй пары</position><titles>2</titles><sport>Бадминтон</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Владимир Ткаченко</full_name><team>Витебский Драйв</team><position>Одиночник</position><titles>6</titles><sport>Бадминтон</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Герман Жданов</full_name><team>Гродненский Смэш</team><position>Игрок смешанной пары</position><titles>3</titles><sport>Бадминтон</sport><rank>3-й разряд</rank></sportsman>
+  <sportsman><full_name>Давид Киселев</full_name><team>Брестские Воланы</team><position>Одиночник</position><titles>4</titles><sport>Бадминтон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Елисей Панкратов</full_name><team>Пинский Пульс</team><position>Игрок первой пары</position><titles>1</titles><sport>Бадминтон</sport><rank>1-й юношеский</rank></sportsman>
+  <sportsman><full_name>Жорж Минин</full_name><team>Днепровский Темп</team><position>Игрок второй пары</position><titles>5</titles><sport>Бадминтон</sport><rank>КМС</rank></sportsman>
+  <sportsman><full_name>Захар Филиппов</full_name><team>Березинский Вектор</team><position>Игрок смешанной пары</position><titles>2</titles><sport>Бадминтон</sport><rank>2-й разряд</rank></sportsman>
+  <sportsman><full_name>Ильдар Синицын</full_name><team>Могилевский Ритм</team><position>Одиночник</position><titles>7</titles><sport>Бадминтон</sport><rank>Мастер спорта</rank></sportsman>
+  <sportsman><full_name>Клим Усов</full_name><team>Несвижский Удар</team><position>Игрок первой пары</position><titles>3</titles><sport>Бадминтон</sport><rank>3-й разряд</rank></sportsman>
+  </sportsmen>
