@@ -1,0 +1,136 @@
+﻿{
+  "waves": [
+    {
+      "enemies": [
+        { "type": "basic", "count": 3 },
+        { "type": "fast", "count": 1 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 4 },
+        { "type": "ranger", "count": 1 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "fast", "count": 3 },
+        { "type": "tank", "count": 1 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 4 },
+        { "type": "assassin", "count": 2 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "tank", "count": 2 },
+        { "type": "ranger", "count": 2 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 5 },
+        { "type": "fast", "count": 3 },
+        { "type": "ranger", "count": 2 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "assassin", "count": 3 },
+        { "type": "fast", "count": 3 },
+        { "type": "tank", "count": 1 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 6 },
+        { "type": "fast", "count": 4 },
+        { "type": "tank", "count": 2 },
+        { "type": "ranger", "count": 2 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 6 },
+        { "type": "ranger", "count": 3 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "fast", "count": 5 },
+        { "type": "assassin", "count": 2 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "tank", "count": 2 },
+        { "type": "basic", "count": 5 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "ranger", "count": 4 },
+        { "type": "fast", "count": 4 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 7 },
+        { "type": "assassin", "count": 3 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "tank", "count": 3 },
+        { "type": "ranger", "count": 3 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "fast", "count": 6 },
+        { "type": "assassin", "count": 3 },
+        { "type": "basic", "count": 4 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 8 },
+        { "type": "fast", "count": 5 },
+        { "type": "ranger", "count": 3 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "tank", "count": 3 },
+        { "type": "assassin", "count": 4 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 8 },
+        { "type": "fast", "count": 6 },
+        { "type": "tank", "count": 2 },
+        { "type": "ranger", "count": 4 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "assassin", "count": 5 },
+        { "type": "fast", "count": 6 },
+        { "type": "tank", "count": 2 }
+      ]
+    },
+    {
+      "enemies": [
+        { "type": "basic", "count": 10 },
+        { "type": "fast", "count": 6 },
+        { "type": "tank", "count": 3 },
+        { "type": "ranger", "count": 4 },
+        { "type": "assassin", "count": 4 }
+      ]
+    }
+  ]
+}

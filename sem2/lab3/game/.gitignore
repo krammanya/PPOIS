@@ -1,0 +1,39 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Local environment files
+.env
+.env.*
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build output
+build/
+dist/
+*.egg-info/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp

@@ -1,0 +1,41 @@
+{
+  "star": {
+    "image": "images/star.png",
+    "size": [40, 40],
+    "speed": 12,
+    "damage": 2,
+    "trail_width": 4,
+    "effect": "direct",
+    "animation_size": [90, 90],
+    "animation_frame_delay": 3,
+    "fallback_animation_image": "images/star.png"
+  },
+  "bomb": {
+    "image": "images/bomb.png",
+    "size": [48, 48],
+    "speed": 8,
+    "damage": 3,
+    "trail_width": 3,
+    "hit_radius": 14,
+    "effect": "explosion",
+    "explosion_radius": 110,
+    "knockback": 20,
+    "explosion_animation_size": [110, 110],
+    "explosion_frame_delay": 3,
+    "animation_frame_delay": 3,
+    "fallback_explosion_image": "images/explosion.jpg"
+  },
+  "diamond": {
+    "image": "images/diamond.png",
+    "size": [80, 80],
+    "speed": 10,
+    "damage": 1,
+    "trail_width": 4,
+    "effect": "slow",
+    "slow_factor": 0.5,
+    "slow_duration_ms": 1800,
+    "animation_size": [100, 100],
+    "animation_frame_delay": 3,
+    "fallback_animation_image": "images/diamond.png"
+  }
+}
